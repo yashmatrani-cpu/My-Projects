@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<style>
+    /* ----- Reset & Global ----- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        color: #1c1c1c;
+        line-height: 1.5;
+        overflow-x: hidden;
+        background: #fff;
+    }
+
+    /* Hero Section (Red Gradient) */
+    body > div:first-of-type {
+        background: linear-gradient(135deg, #e23744 0%, #cb202d 100%);
+        color: white;
+        padding: 80px 20px 60px;
+        text-align: center;
+        position: relative;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        clip-path: ellipse(100% 90% at 50% 0%);
+    }
+
+    body > div:first-of-type h1:first-child {
+        font-size: 4rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    }
+
+    body > div:first-of-type h1:nth-child(2) {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+        opacity: 0.95;
+    }
+
+    body > div:first-of-type p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+    }
+
+    /* Download buttons */
+    body > div:nth-of-type(2) {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: -40px;
+        margin-bottom: 60px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+    }
+
+    body > div:nth-of-type(2) a {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: black;
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    body > div:nth-of-type(2) a:hover {
+        background: #1a1a1a;
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+    }
+
+    body > div:nth-of-type(2) a:first-child::before {
+        content: "▶";
+        font-size: 0.8rem;
+    }
+
+    body > div:nth-of-type(2) a:last-child::before {
+        content: "🍎";
+    }
+
+    /* Better Food Section */
+    body > div:nth-of-type(3) {
+        text-align: center;
+        padding: 80px 20px 40px;
+        background: #f8f8f8;
+    }
+
+    body > div:nth-of-type(3) h2 {
+        font-size: 2.5rem;
+        color: #1c1c1c;
+        font-weight: 800;
+        margin-bottom: 15px;
+        letter-spacing: -0.5px;
+    }
+
+    body > div:nth-of-type(3) p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        color: #555;
+    }
+
+    /* Stats Table */
+    table {
+        width: 100%;
+        margin: 50px auto;
+        border-collapse: collapse;
+        max-width: 900px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 20px;
+        flex-wrap: wrap;
+    }
+
+    table tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #e23744;
+        padding: 15px;
+    }
+
+    table tr::after {
+        content: "RESTAURANTS";
+        font-size: 1rem;
+        font-weight: 500;
+        color: #696969;
+        margin-top: 8px;
+    }
+
+    table tr:nth-child(2)::after {
+        content: "CITIES";
+    }
+    table tr:nth-child(3)::after {
+        content: "ORDERS DELIVERED";
+    }
+
+    /* What's waiting Section */
+    body > h1:nth-of-type(1) {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-top: 60px;
+        color: #1c1c1c;
+    }
+
+    body > p:nth-of-type(1) {
+        text-align: center;
+        max-width: 600px;
+        margin: 10px auto 40px;
+        color: #555;
+        font-size: 1.1rem;
+    }
+
+    /* ========== GOLD SECTION (BLACK + GOLD) ========== */
+    body > h3:first-of-type,
+    body > h1:nth-of-type(2),
+    body > p:nth-of-type(2),
+    body > h3:nth-of-type(2),
+    body > h5:nth-of-type(1),
+    body > h5:nth-of-type(2) {
+        background: #000000;
+        color: #FFD700;
+        margin: 0;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    body > h3:first-of-type {
+        padding-top: 50px;
+        font-size: 1.5rem;
+        color: #D4AF37;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    body > h1:nth-of-type(2) {
+        font-size: 5rem;
+        font-weight: 900;
+        letter-spacing: 10px;
+        color: #FFD700;
+        text-shadow: 0 0 10px rgba(255,215,0,0.6);
+    }
+
+    body > p:nth-of-type(2) {
+        font-size: 1.2rem;
+        color: #f0e68c;
+        padding-bottom: 20px;
+    }
+
+    body > h3:nth-of-type(2) {
+        padding-top: 40px;
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #FFD700;
+        border-top: 1px solid #FFD700;
+        width: fit-content;
+        margin: 20px auto 0;
+        background: none;
+    }
+
+    body > h5:nth-of-type(1),
+    body > h5:nth-of-type(2) {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: none;
+        padding: 15px;
+        color: #FFD700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    body > h5:nth-of-type(1)::before {
+        content: "✅";
+        color: #FFD700;
+    }
+
+    body > h5:nth-of-type(2)::before {
+        content: "💰";
+        color: #FFD700;
+    }
+
+    body > h5:nth-of-type(2) {
+        padding-bottom: 50px;
+    }
+
+    /* Eternal / Blinkit Section */
+    body > h1:nth-of-type(3) {
+        text-align: center;
+        font-size: 2.5rem;
+        margin: 60px 0 10px;
+    }
+
+    body > h2:nth-of-type(1) {
+        text-align: center;
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    body > h2:nth-of-type(2) a,
+    body > h2:nth-of-type(3) a {
+        display: inline-block;
+        background: #e23744;
+        color: white;
+        padding: 14px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+        margin: 10px auto;
+        text-align: center;
+        width: fit-content;
+    }
+
+    body > h2:nth-of-type(2) a:hover,
+    body > h2:nth-of-type(3) a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+
+    body > h2:nth-of-type(2),
+    body > h2:nth-of-type(3) {
+        text-align: center;
+        margin: 20px;
+    }
+
+    body > h2:nth-of-type(3) a {
+        background: #ffc700;
+        color: #000;
+        font-weight: 700;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        body > div:first-of-type h1:first-child {
+            font-size: 2.8rem;
+        }
+        table tr {
+            font-size: 1.8rem;
+        }
+        body > div:nth-of-type(2) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<script>
+    // Ripple effect on buttons
+    document.querySelectorAll('a').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            let ripple = document.createElement('span');
+            ripple.style.position = 'absolute';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(255,215,0,0.5)';
+            ripple.style.width = '20px';
+            ripple.style.height = '20px';
+            ripple.style.left = (e.clientX - this.getBoundingClientRect().left) + 'px';
+            ripple.style.top = (e.clientY - this.getBoundingClientRect().top) + 'px';
+            ripple.style.animation = 'ripple 0.6s linear';
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+        });
+    });
+
+    // Add ripple keyframes dynamically
+    const styleSheet = document.createElement("style");
+    styleSheet.textContent = `
+        @keyframes ripple {
+            from { transform: scale(0); opacity: 1; }
+            to { transform: scale(4); opacity: 0; }
+        }
+        a { position: relative; overflow: hidden; }
+    `;
+    document.head.appendChild(styleSheet);
+</script>
+    <div>
+        <h1>
+            ZOMATO
+        </h1>
+        <h1>
+            india's number 1 food delivery app
+        </h1>
+        <p>
+            Experience fast & easy online ordering
+            on the Zomato app
+        </p>
+    </div>
+    <div>
+        <a href="https://play.google.com/store/apps/dev?id=7812834815367511165&hl=en_IN&pli=1&source_caller=ui&shortlink=iwz6g6kg&c=zomato_web_hp_android&pid=zomato_web_hp_android&deep_link_value=zomato%3A%2F%2Fhome&af_xp=social&af_force_deeplink=true"
+            target="_blank">download with play store</a>
+        <a href="https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896" target="_blank">download on app
+            store</a>
+    </div>
+    <div>
+        <h2>
+            BETTER FOOD FOR MORE PEOPLE
+        </h2>
+        <P>
+            For over a decade, we’ve enabled our customers to discover new tastes, delivered right to their doorstep
+        </P>
+    </div>
+    <table>
+        <tr>3000+ resturants</tr>
+        <br>
+        <tr>800+cities</tr>
+        <br>
+        <tr>3 billion+ ordered delivered</tr>
+    </table>
+    <h1>
+        WHAT IS WAITING FOR YOU IN THIS APP?
+    </h1>
+    <P>
+        Our app is packed with features that enable you to experience food delivery like never before
+    </P>
+    <H3>ZOMATO</H3>
+    <h1>GOLD</h1>
+    <p>indias top savings programm for food lovers</p>
+    <h3>*GOLD BENIFITS*</h3>
+    <H5>1.FREE DELIVERY</H5>
+    <H5>EXTRA 30% OFF</H5>
+    <H1>
+        eternal
+    </H1>
+    <h2>
+        POWERING INDIA’S
+CHANGING LIFESTYLES
+    </h2>
+    <h2>
+        <a href="https://www.zomato.com/ncr/restaurants" target="_blank">get the app now</a>
+    </h2>
+    <h2>
+        <a href="https://blinkit.com/" target="_blank">choose from 30k+ products and get deliver them at your doorstep</a>
+    </h2>
+
+</body>
+
+</html>
