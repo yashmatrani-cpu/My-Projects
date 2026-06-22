@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// faulty calculator
+
+//+-->-
+//*-->+
+//(-)--->/
+//(/)-->**
+
+// it performs worng operation 10%of the times
+alert("Script started");
+let a = prompt('enter first number')
+let num1 = Number(a)
+let b = prompt('enter second number')
+let num2 = Number(b)
+let c = prompt('enter operation')
+let random = Math.random()
+const faulty = function(num1,num2,c){
+    if(random>0.1){
+      if(c=='+'){
+        return num1+num2
+      }
+      else if(c=='-'){
+        return num1-num2
+      }
+      else if(c=='*'){
+        return num1*num2
+      }
+      else if(c=='/'){
+        return num1/num2
+      }
+     else if(c=='**'){
+        return num1**num2
+     }
+     else{
+        console.log('invalid input')
+     }
+    } 
+    else{
+         if(c=='+'){
+        return num1-num2
+      }
+      else if(c=='-'){
+        return num1/num2
+      }
+      else if(c=='*'){
+        return num1+num2
+      }
+      else if(c=='/'){
+        return num1**num2
+      }
+     else if(c=='**'){
+        return num1-num2
+     }
+     else{
+        console.log('invalid input')
+     }
+    } 
+}
+alert(faulty(num1,num2,c))
+</script>
+</body>
+</html>
