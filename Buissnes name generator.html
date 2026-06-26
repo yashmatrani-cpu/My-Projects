@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+          console.log('welcome to buissness name generator');
+          let adjectives = {1:'crazy',
+                 2:'amazing',
+                 3:'fire'};
+let shopName = {1:'engine',
+                2:'foods',
+                3:'garments'};
+let anotherWords = {1:'bros',
+                    2:'limited',
+                    3:'hub' };
+while(true){
+let rand1 = Math.floor(Math.random()*3)+1;
+let rand2 = Math.floor(Math.random()*3)+1;
+let rand3 = Math.floor(Math.random()*3)+1;
+let adjectiveOBJ = adjectives[rand1];
+let shopNameOBJ = shopName[rand2];
+let anotherWordsOBJ = anotherWords[rand3];   
+let a = prompt('press 1 for generate a name and 2 for exit:');
+if(a==='1'){
+    alert('inside if')
+console.log(`${adjectiveOBJ} ${shopNameOBJ} ${anotherWordsOBJ}`);}
+else if(a==='2'){
+    alert('inside else if')
+    console.log('thanks for using');
+    break;
+}
+else{
+    alert('inside else')
+    console.log('invalid input');
+    continue;
+}
+}
+                  
+  </script> 
+</body>
+</html>
