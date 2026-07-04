@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buy code , complete dreams</title>
+    <link rel="stylesheet" href="code seller.css">
+</head>
+<style>
+    /* <!--navbar--> */
+    .body {
+        background-color: rgb(32, 29, 29);
+        color: whitesmoke;
+    }
+
+    .navbar {
+        height: 5rem;
+        background: black;
+        display: flex;
+        flex-direction: row;
+        color: rgb(165, 150, 150);
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 3px;
+    }
+
+    .box:hover {
+        color: rgb(255, 255, 255);
+        border: 2px solid white;
+        text-decoration: none;
+
+    }
+
+    .a {
+        text-decoration: none;
+    }
+
+    /* <!-- 2ndnavbar --> */
+    .navbar2 {
+        height: 4rem;
+        background-color: rgb(158, 242, 158);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        align-items: center;
+        border-radius: 3px;
+    }
+
+    /* hero section */
+    .img {
+        height: 10rem;
+    }
+
+    .hero {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        background-color: black;
+        border-radius: 2rem;
+    }
+
+    .heading {
+        color: white;
+    }
+
+    .button {
+        margin: 90px;
+        color: greenyellow;
+    }
+
+    /* cards */
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        overflow: hidden;
+        margin: 1.5rem;
+    }
+
+
+    .card p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .card img {
+        object-fit: cover;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+        background-color: #1a1a1a;
+        color: #ccc;
+        padding: 40px 20px 20px;
+        font-family: Arial, sans-serif;
+        margin-top: 40px;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .footer-column {
+        flex: 1;
+        min-width: 150px;
+    }
+
+    .footer-column h4 {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+        color: #fff;
+    }
+
+    /* Footer Stats */
+    .footer-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        border-top: 1px solid #333;
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+
+    .footer-stats div {
+        font-size: 0.8rem;
+        color: #aaa;
+    }
+
+    .footer-stats div span {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    /* Footer Brand Line */
+    .footer-brand {
+        border-top: 1px solid #333;
+        padding-top: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        color: #aaa;
+    }
+
+    .footer-brand .logo {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .footer-brand .logo span {
+        color: #4CAF50;
+    }
+
+    .footer-brand .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .footer-brand .links a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.75rem;
+    }
+
+    .footer-brand .links a:hover {
+        color: #fff;
+    }
+
+    /* Cookie Consent Bar */
+    .cookie-bar {
+        background-color: #2a2a2a;
+        color: #ccc;
+        padding: 15px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+    }
+
+    .cookie-bar p {
+        flex: 1;
+        margin: 0;
+    }
+
+    .cookie-bar .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .cookie-bar .btn-group button {
+        padding: 8px 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.3s ease;
+    }
+
+    .cookie-bar .btn-accept {
+        background: #4CAF50;
+        color: #fff;
+    }
+
+    .cookie-bar .btn-accept:hover {
+        background: #45a049;
+    }
+
+    .cookie-bar .btn-reject {
+        background: transparent;
+        color: #ccc;
+        border: 1px solid #555;
+    }
+
+    .cookie-bar .btn-reject:hover {
+        background: #333;
+    }
+
+    .cookie-bar .btn-manage {
+        background: transparent;
+        color: #ccc;
+        border: 1px solid #555;
+    }
+
+    .cookie-bar .btn-manage:hover {
+        background: #333;
+    }
+
+    /* login section */
+    /* Login Section */
+    .login-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        background: #1e1e1e;
+        border-radius: 12px;
+        margin: 30px 20px;
+    }
+
+    .login-container {
+        background: #2a2a2a;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 450px;
+        border: 1px solid #444;
+    }
+
+    .login-container h2 {
+        color: #fff;
+        font-size: 1.5rem;
+        margin: 20px 0 12px;
+        text-align: center;
+    }
+
+    /* Login Image Overlay */
+    .login-image {
+        position: relative;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    .login-image img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+        border-radius: 12px;
+    }
+
+    .login-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .login-overlay h2 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .login-signin-btn {
+        padding: 12px 36px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 16px rgba(76, 175, 80, 0.4);
+    }
+
+    .login-signin-btn:hover {
+        background: #45a049;
+        transform: scale(1.05);
+    }
+
+    /* Form */
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .form-group label {
+        color: #ccc;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .form-group input[type="email"] {
+        padding: 12px 14px;
+        border-radius: 8px;
+        border: 1px solid #444;
+        background: #1a1a1a;
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+        transition: 0.3s ease;
+    }
+
+    .form-group input[type="email"]:focus {
+        border-color: #4CAF50;
+        box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+    }
+
+    .radio-group {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .radio-group label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: #ccc;
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+
+    .radio-group input[type="radio"] {
+        accent-color: #4CAF50;
+        width: 16px;
+        height: 16px;
+    }
+
+    .login-btn {
+        padding: 14px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .login-btn:hover {
+        background: #45a049;
+        transform: scale(1.02);
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+        .login-container {
+            padding: 20px;
+        }
+
+        .login-image img {
+            height: 140px;
+        }
+
+        .login-overlay h2 {
+            font-size: 1.2rem;
+        }
+
+        .radio-group {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-stats {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-brand {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .cookie-bar {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .cookie-bar .btn-group {
+            justify-content: center;
+        }
+    }
+</style>
+
+<body class="body">
+    <div class="navbar">
+        <div class="code box"><b>code</b></div>
+        <div class="theme box">Web Thems and Templates</div>
+        <div class='video box'>Video</div>
+        <div class="offers box">Offers on python codes</div>
+        <div class="more box"><a href="#" target="_blank">About us</a></div>
+    </div>
+    <div class="navbar2">
+        <div class="python box">Python Scrits</div>
+        <div class="javascipt box">JavaScript</div>
+        <div class="html box">HHTML structures</div>
+        <div class="css box">Styles</div>
+        <div class="c box">c codes</div>
+        <div class="web box">Websites page</div>
+        <div class="more box"><a href="#" target="_blank">click to see more</a></div>
+    </div>
+    <div class="text">
+        <h2>Thousands of code, scripts & plugins for every website build</h2>
+        <p>Choose from ecommerce plugins, mobile app templates, PHP, Bootstrap & more for any budget, built by the
+            world’s best developers.
+        </p>
+    </div>
+    <div class="Timg">
+        <img src="https://assets.market-storefront.envato-static.com/storefront/assets/home/codecanyon/hero-image--popular-items-59cb79f0911d5732f203ee2bbae875a364e0877f5e668d4f50c23ed19f1a2742.webp"
+            alt="sorry can't generate this image">
+    </div>
+    <div class="hero">
+        <div class="heading">
+            <h2>Get unlimited downloads
+                across Web Templates, Stock Video, Creative Assets and more.</h2>
+        </div>
+        <div class="img">
+            <img class='img'
+                src="https://assets.market-storefront.envato-static.com/storefront/assets/elements-banner-panels/codecanyon-3c11510187786083491c71c8ab4015645d52ef55079c53583d3003f6343f85b7.png">
+        </div>
+        <div class="button">
+            <button>start now -></button>
+        </div>
+    </div>
+    <h2>Check out our newest code, scripts and templates</h2>
+    <div class="cards">
+        <div class="card1 card">
+            <img
+                src="https://market-resized.envatousercontent.com/previews/files/818159046/inlinepreview.png?w=590&h=300&cf_fit=crop&crop=top&format=auto&q=85&s=3ba9b238bb2c66d4a66dfc22d2c34c282cfff0756272351b9227b2734b96bead">
+            <p>price:300 size:200mb</p>
+        </div>
+        <div class="card2 card">
+            <img
+                src="https://market-resized.envatousercontent.com/previews/files/259266806/Lararent+590X300_Banner+%281%29.jpg?w=590&h=300&cf_fit=crop&crop=top&format=auto&q=85&s=97607cca8287b7799f211f9baa771f75f12fad7bc14d6f1da758f7abb5beb4bf">
+            <p>Lara Rent-multipurpose rental system</p>
+        </div>
+        <div class="card3 card">
+            <img
+                src="https://market-resized.envatousercontent.com/previews/files/263412172/NeonLMS-preview.jpg?w=590&h=300&cf_fit=crop&crop=top&format=auto&q=85&s=26dd211b6d459f69229a5f9f1321fdfe2844c1d8f64c682bee5c886ddb4a2dfb">
+            <p>Neon Learning System</p>
+        </div>
+    </div>
+    <!-- Login Section -->
+    <div class="login-section">
+        <div class="login-container">
+            <div class="login-image">
+                <img src="https://assets.market-storefront.envato-static.com/storefront/assets/elements-banner-panels/codecanyon-3c11510187786083491c71c8ab4015645d52ef55079c53583d3003f6343f85b7.png"
+                    alt="Login">
+                <div class="login-overlay">
+                    <h2>Welcome Back!</h2>
+                    <button class="login-signin-btn">Sign In</button>
+                </div>
+            </div>
+            <h2>Now What You Can Do To Help Us? — Login</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="login-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Column 1 -->
+            <div class="footer-column">
+                <h4>Envato Market</h4>
+                <ul>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">About Envato</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Licenses</a></li>
+                    <li><a href="#">Authors</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-column">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">Meetups</a></li>
+                    <li><a href="#">Market API</a></li>
+                    <li><a href="#">Become an affiliate</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="footer-stats">
+            <div><span>78,807,145</span> items sold</div>
+            <div><span>$1,251,899,511</span> community earnings</div>
+        </div>
+
+        <!-- Brand Line -->
+        <div class="footer-brand">
+            <div class="logo">Code<span>Mart</span></div>
+            <div class="links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookies</a>
+                <a href="#">Sitemap</a>
+            </div>
+            <div>© 2026 CodeMart. All rights reserved.</div>
+        </div>
+
+        <!-- Cookie Consent Bar -->
+        <div class="cookie-bar">
+            <p>We use cookies to enhance your experience, analyse traffic, and serve personalised content. 'Accept
+                all' to consent per our <a href="#" style="color:#4CAF50;">Cookie and Privacy policies</a>.</p>
+            <div class="btn-group">
+                <button class="btn-manage">Manage preferences</button>
+                <button class="btn-reject">Reject all</button>
+                <button class="btn-accept">Accept all</button>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
