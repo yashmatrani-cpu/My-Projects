@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="utility classes for styling after navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * {
+        padding: 0px;
+        margin: 0px;
+        font-weight: bold;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .justify-center {
+        justify-content: center;
+    }
+
+    .align-center {
+        align-items: center;
+    }
+
+    .border {
+        border: 2px solid rgb(31, 31, 31);
+        margin: 3px;
+    }
+
+    .back {
+        background-color: rgb(48, 48, 48);
+    }
+
+    .border-r {
+        border-radius: 70%;
+    }
+
+    body {
+        font-weight: bold;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    }
+
+    body {
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    /* ----- NAVBAR (Spotify 2024) ----- */
+    .navbar {
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 24px;
+        border-bottom: 1px solid #1a1a1a;
+        height: 56px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+    }
+
+    /* Logo */
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+        flex-shrink: 0;
+    }
+
+    /* Search Bar Container */
+    .nav-search {
+        display: flex;
+        align-items: center;
+        background-color: #1a1a1a;
+        border-radius: 40px;
+        padding: 0 8px 0 12px;
+        height: 40px;
+        flex: 1;
+        max-width: 470px;
+        min-width: 200px;
+        border: 1px solid #2a2a2a;
+        transition: border 0.2s ease;
+    }
+
+    .nav-search:focus-within {
+        border-color: #1fdf64;
+    }
+
+    .search-icon-btn {
+        background: transparent;
+        border: none;
+        color: #b3b3b3;
+        font-size: 16px;
+        padding: 0;
+        margin-right: 6px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+    }
+
+    .search-icon-btn:hover {
+        color: #ffffff;
+    }
+
+    .search-input {
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 8px 0;
+        flex: 1;
+        outline: none;
+        min-width: 0;
+    }
+
+    .search-input::placeholder {
+        color: #7a7a7a;
+        font-weight: 400;
+    }
+
+    .browse-icon-btn {
+        background: transparent;
+        border: none;
+        color: #b3b3b3;
+        font-size: 16px;
+        padding: 0;
+        margin-left: 4px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: background 0.2s ease;
+    }
+
+    .browse-icon-btn:hover {
+        background-color: #2a2a2a;
+        color: #ffffff;
+    }
+
+    /* Right Actions */
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .explore-btn {
+        background: transparent;
+        border: none;
+        color: #b3b3b3;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 6px 14px;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+
+    .explore-btn:hover {
+        color: #ffffff;
+        transform: scale(1.02);
+    }
+
+    .install-btn {
+        background: transparent;
+        border: none;
+        color: #b3b3b3;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+
+    .install-btn i {
+        font-size: 14px;
+    }
+
+    .install-btn:hover {
+        color: #ffffff;
+        transform: scale(1.02);
+    }
+
+    /* Icon Buttons (Bell, Users) */
+    .icon-btn {
+        background: transparent;
+        border: none;
+        color: #b3b3b3;
+        font-size: 18px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    .icon-btn:hover {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+    .profile-btn {
+        background: transparent;
+        border: none;
+        color: #b3b3b3;
+        font-size: 22px;
+        padding: 4px 10px 4px 6px;
+        border-radius: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.25s ease;
+        border: 1px solid transparent;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .profile-btn i {
+        font-size: 26px;
+        color: #ffffff;
+    }
+
+    .profile-btn .badge {
+        font-size: 13px;
+        font-weight: 600;
+        color: #ffffff;
+        opacity: 0;
+        max-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: all 0.25s ease;
+    }
+
+    .profile-btn:hover {
+        background-color: #1a1a1a;
+        border-color: #2a2a2a;
+        padding-right: 16px;
+    }
+
+    .profile-btn:hover .badge {
+        opacity: 1;
+        max-width: 40px;
+        margin-left: 4px;
+    }
+
+    .profile-btn:hover i {
+        transform: scale(1.05);
+    }
+
+
+    /* NAVBAR OVER */
+
+    .left {
+        width: 25vw;
+        background-color: rgb(1, 1, 1);
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+    }
+
+    .right {
+        border-radius: 10px;
+        width: 75vw;
+        background-color: rgb(1, 1, 1);
+        position: relative;
+    }
+
+    .spotify-playlist {
+        padding: 16px;
+    }
+
+    .library {
+        padding: 16px;
+    }
+
+    .library {
+        gap: 190px;
+        padding: 10px;
+        margin-top: 7px;
+    }
+
+    .library button {
+        border-radius: 70px;
+        background-color: #1F1F1F;
+        color: white;
+        padding: 8px 16px;
+    }
+
+    .first-playlist {
+        background-color: rgb(8, 8, 8);
+    }
+
+    .creates {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .CP button {
+        border-radius: 70px;
+        padding: 6px;
+        margin-top: 5px;
+    }
+
+    .creates2 {
+        flex-direction: column;
+        gap: 5px;
+
+    }
+
+    .CP2 {
+        border-radius: 70px;
+        padding: 6px;
+        margin-top: 5px;
+    }
+
+    .left {
+        height: calc(100vh - 75px);
+        margin-right: 9px;
+
+        .sidebar-footer {
+            margin-top: auto;
+        }
+    }
+
+    .creates3 {
+        background-color: rgb(8, 8, 8);
+        border-radius: 8px;
+        padding: 15px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .creates3 h4 {
+        color: white;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .creates3 p {
+        color: #b3b3b3;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .left {
+        height: calc(100vh - 75px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: hidden;
+        padding-bottom: 10px;
+    }
+
+    .sidebar-footer {
+        margin-top: auto;
+        width: 100%;
+        padding-top: 12px;
+        border-top: 1px solid #2a2a2a;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: #b3b3b3;
+        font-size: 11px;
+        text-decoration: none;
+        line-height: 1.4;
+    }
+
+    .footer-links a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .lang-btn {
+        background: transparent;
+        border: 1px solid #535353;
+        border-radius: 20px;
+        color: white;
+        padding: 4px 14px;
+        font-size: 12px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: 0.2s;
+    }
+
+    .lang-btn:hover {
+        border-color: white;
+    }
+
+    .creates,
+    .creates2,
+    .creates3 {
+        background-color: rgb(8, 8, 8);
+        border-radius: 12px;
+        padding: 20px 18px;
+        height: 110px;
+    }
+
+    .creates,
+    .creates2,
+    .creates3 {
+        flex-shrink: 0;
+        background-color: rgb(5, 5, 5);
+    }
+
+    .easy {
+        background-color: rgb(5, 5, 5);
+    }
+
+    .createBtn {
+        margin-right: 30px;
+        border: none;
+    }
+
+    .createBtn:hover {
+        background-color: #252525;
+        border: 2px solid black;
+    }
+
+
+    .library p {
+        white-space: nowrap;
+    }
+
+    .library p {
+        color: #FFFFFF;
+        font-weight: 700;
+    }
+
+    /* right section's styling */
+
+    .spotify-playlist {
+        padding: 16px;
+    }
+
+    .left {
+        border: none;
+    }
+
+    .card {
+        width: 200px;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: rgb(1, 1, 1);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .card img {
+        width: 100px;
+        height: 250px;
+
+    }
+
+    .card img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .card>* {
+        padding-top: 10px;
+    }
+
+    .cardContainer {
+        margin: 30px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .card:hover {
+        background-color: #252525;
+    }
+
+    .play-btn {
+        background-color: #1fdf64;
+        border-radius: 50%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 280px;
+        right: 20px;
+        opacity: 0;
+        transition: all 0.15s ease;
+    }
+
+    .card:hover .play-btn {
+        opacity: 1;
+        top: 180px;
+    }
+
+
+    .left {
+        height: calc(100vh - 75px) !important;
+        overflow: hidden !important;
+    }
+
+    .cardContainer {
+        display: flex;
+        gap: 3px;
+        flex-direction: row;
+    }
+
+
+    .playbar {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(8, 8, 8);
+        padding: 22px;
+    }
+
+    .playbar button {
+        border: none;
+        background-color: rgb(8, 8, 8);
+        color: #B3B3B3;
+        height: 25px;
+        width: 25px;
+        cursor: pointer;
+    }
+
+    .forward-btn {
+        margin-right: 400px;
+    }
+
+    .pre-btn {
+        margin-left: 400px;
+    }
+
+    .seek {
+        border-radius: 20px;
+        position: absolute;
+        height: 2px;
+        width: 98%;
+        border: 2px solid white;
+        bottom: 0;
+        margin: 0;
+    }
+
+    .circle {
+        width: 14px;
+        height: 14px;
+        background: rgb(0, 0, 0);
+        border-radius: 50%;
+        position: absolute;
+        left: 0px;
+        transform: translate(-50%, -50%);
+        border: none;
+    }
+
+    .card {
+        flex-shrink: 0;
+    }
+
+    .songInfo {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        display: inline-block;
+    }
+
+    .songInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-width: 120px;
+        max-width: 260px;
+        padding: 0 8px;
+    }
+
+    .song-title {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .song-artist {
+        color: #b3b3b3;
+        font-size: 12px;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .songTimer {
+        margin-left: auto;
+        color: #ffffff;
+        font-size: 14px;
+        padding-right: 20px;
+        min-width: 80px;
+        text-align: right;
+    }
+
+    .seek {
+        cursor: pointer;
+        height: 4px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .volume {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .v-seek {
+        position: relative;
+        flex: 1;
+        border-radius: 20px;
+        height: 2px;
+        width: 90px;
+        border: 2px solid white;
+        bottom: 0;
+        margin: 0;
+    }
+
+    .v-circle {
+        left: 50%;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        left: 0px;
+        transform: translate(-50%, -50%);
+        border: none;
+    }
+
+    @media (max-width:1400px) {
+        .left {
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            left: 100;
+            transition: all .3s;
+            width: 233px;
+        }
+
+        .right {
+            width: 100vw;
+            z-index: 2;
+        }
+
+        .playbar {
+            width: 95vx;
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 75px);
+        overflow: hidden;
+        background-color: rgb(1, 1, 1);
+        border-radius: 10px;
+        width: 75vw;
+    }
+
+
+    .cardContainer {
+        flex: 1;
+        overflow-y: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        align-content: flex-start;
+    }
+
+
+    .playbar {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        background-color: rgb(8, 8, 8);
+        padding: 12px 20px;
+        width: 100%;
+        box-sizing: border-box;
+        border-top: 1px solid #2a2a2a;
+    }
+
+
+    .songTimer,
+    .volume {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .right {
+        display: flex !important;
+        flex-direction: column !important;
+        height: calc(100vh - 75px) !important;
+        overflow: hidden !important;
+    }
+
+
+    .spotify-playlist {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+
+
+    .cardContainer {
+        flex: 1 !important;
+        overflow-y: auto !important;
+        padding-bottom: 10px !important;
+    }
+
+    .playbar {
+        flex-shrink: 0 !important;
+        margin-top: auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+        background-color: rgb(8, 8, 8) !important;
+        padding: 12px 20px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        border-top: 1px solid #2a2a2a !important;
+    }
+
+    .playbar {
+        position: sticky !important;
+        bottom: 0 !important;
+        background-color: rgb(8, 8, 8) !important;
+        padding: 12px 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        border-top: 1px solid #2a2a2a !important;
+        z-index: 10 !important;
+    }
+
+    .right {
+        overflow-y: auto !important;
+        height: calc(100vh - 75px) !important;
+    }
+
+
+    .playbar {
+        position: sticky !important;
+        bottom: 0 !important;
+        background-color: #181818 !important;
+
+        padding: 12px 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        gap: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        border-top: 1px solid #282828 !important;
+        z-index: 100 !important;
+        flex-wrap: nowrap !important;
+
+    }
+
+
+    .songInfo {
+        flex-shrink: 0 !important;
+        min-width: 120px !important;
+        max-width: 200px !important;
+    }
+
+    .playbar-center {
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+        flex: 1 !important;
+
+        justify-content: center !important;
+        min-width: 0;
+
+    }
+
+    .seek {
+        position: relative !important;
+
+        flex: 1 !important;
+        height: 4px !important;
+        background-color: #535353 !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+        border: none !important;
+        min-width: 60px !important;
+        max-width: 600px !important;
+    }
+
+    .seek .circle {
+        position: absolute !important;
+        top: 50% !important;
+        left: 0%;
+        transform: translate(-50%, -50%) !important;
+        width: 14px !important;
+        height: 14px !important;
+        background: #ffffff !important;
+        border-radius: 50% !important;
+        border: 2px solid #1fdf64 !important;
+        pointer-events: none !important;
+        box-shadow: 0 0 12px rgba(31, 223, 100, 0.3) !important;
+    }
+
+    .playbar-right {
+        display: flex !important;
+        align-items: center !important;
+        gap: 15px !important;
+        flex-shrink: 0 !important;
+
+        margin-left: auto !important;
+
+    }
+
+    /* Timer */
+    .songTimer {
+        color: #b3b3b3 !important;
+        font-size: 13px !important;
+        font-family: monospace !important;
+        min-width: 70px !important;
+        text-align: center !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Volume */
+    .volume {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Volume Seekbar */
+    .v-seek {
+        position: relative !important;
+        width: 80px !important;
+        height: 4px !important;
+        background-color: #535353 !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+        border: none !important;
+    }
+
+    .v-circle {
+        position: absolute !important;
+        top: 50% !important;
+        left: 100%;
+        transform: translate(-50%, -50%) !important;
+        width: 14px !important;
+        height: 14px !important;
+        background: #ffffff !important;
+        border-radius: 50% !important;
+        border: 2px solid #1fdf64 !important;
+        pointer-events: none !important;
+        box-shadow: 0 0 12px rgba(31, 223, 100, 0.3) !important;
+    }
+
+    /* Volume icons */
+    .volume i {
+        color: #b3b3b3 !important;
+        font-size: 16px !important;
+        cursor: pointer !important;
+        flex-shrink: 0 !important;
+    }
+
+    .volume i:hover {
+        color: #ffffff !important;
+    }
+
+    /* ---- Playback Buttons (Prev, Play, Next) ---- */
+    .playbar-center .pre-btn,
+    .playbar-center .play1-btn,
+    .playbar-center .forward-btn {
+        flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .playbar-center button {
+        background: transparent !important;
+        border: none !important;
+        color: #b3b3b3 !important;
+        font-size: 18px !important;
+        cursor: pointer !important;
+        padding: 5px !important;
+        transition: 0.2s !important;
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .playbar-center button:hover {
+        color: #ffffff !important;
+        transform: scale(1.1) !important;
+    }
+
+    .playbar-center .play1-btn button {
+        background-color: #1fdf64 !important;
+        border-radius: 50% !important;
+        color: #000000 !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .playbar-center .play1-btn button:hover {
+        transform: scale(1.05) !important;
+        background-color: #1ed760 !important;
+    }
+
+    /* ---- Right Section (Scrollable) ---- */
+    .right {
+        overflow-y: auto !important;
+        height: calc(100vh - 75px) !important;
+        padding-bottom: 70px !important;
+        /* Playbar ke liye jagah */
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="nav-logo">
+            <img src="logo.svg" alt="Spotify" width="32" height="32">
+        </div>
+
+        <div class="nav-search">
+            <button class="search-icon-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input class="search-input" type="text" placeholder="What do you want to play?">
+            <button class="browse-icon-btn">
+                <i class="fa-solid fa-music"></i>
+            </button>
+        </div>
+
+        <!-- Right: Actions & Icons -->
+        <div class="nav-actions">
+            <button class="explore-btn">Explore Premium</button>
+            <button class="install-btn">
+                <i class="fa-solid fa-download"></i> Install App
+            </button>
+            <button class="icon-btn bell-btn">
+                <i class="fa-regular fa-bell"></i>
+            </button>
+            <button class="icon-btn user-btn">
+                <i class="fa-solid fa-users"></i>
+            </button>
+            <button class="profile-btn">
+                <i class="fa-regular fa-circle-user"></i>
+                <span class="badge">0/5</span>
+            </button>
+        </div>
+    </div>
+    <div class="container flex">
+        <div class="left border flex">
+            <div class="library flex">
+                <p>Your Library</p>
+                <button class="createBtn">+Create</button>
+            </div>
+            <div class="creates back flex">
+                <div class="first-playlist back">
+                    <h4>Create Your First Playlist</h4>
+                </div>
+                <div class="easy back">
+                    <p>It's easy we'll help</p>
+                </div>
+                <div class="CP">
+                    <button class="CP2">Create Playlist</button>
+                </div>
+            </div>
+            <div class="creates2 back flex">
+                <div class="podcasts">
+                    <h4>Let's find some new podcasts</h4>
+                </div>
+                <div class="updated2">
+                    <p>We will keep you updated</p>
+                </div>
+                <div>
+                    <button class="CP2">Browse Podcasts</button>
+                </div>
+            </div>
+            <!-- Extra Box (Space fill karne ke liye) -->
+            <div class="creates3 flex">
+                <div class="download-songs">
+                    <h4>Download your favourite songs</h4>
+                </div>
+                <div class="offline">
+                    <p>Listen offline, anytime anywhere</p>
+                </div>
+                <div>
+                    <button class="CP2">Download Now</button>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="footer-links">
+                    <a href="#">Legal</a>
+                    <a href="#">Safety & Privacy Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">About Ads</a>
+                    <a href="#">Accessibility</a>
+                </div>
+                <button class="lang-btn">
+                    <i class="fa-solid fa-globe"></i> English
+                </button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="spotify-playlist">
+                <h1>Spotify Playlist and Playble songs</h1>
+                <div class="cardContainer">
+                    <div class="card" data-song="Bairan">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img src="data:image/jpeg;base64,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"
+                            alt="">
+                        <h2>Bairan</h2>
+                        <p>Banjaare</p>
+                    </div>
+                    <div class="card" data-song="Naam_chale">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuolRziJcHrx2vk-HKvhLDe58ZNnVt9V3etkeM4jkWbQ&s=10"
+                            alt="">
+                        <h2>Naam Chale</h2>
+                        <p>Vikram Sarkar</p>
+                    </div>
+                    <div class="card" data-song="Devil_eyes">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px" src="https://i.ytimg.com/vi/71sMtFuSvoE/hqdefault.jpg" alt="">
+                        <h2>Devil eyes</h2>
+                        <p>Hippie Sabotage</p>
+                    </div>
+                    <div class="card" data-song="Night_changes">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px" src="https://i.ytimg.com/vi/syFZfO_wfMQ/maxresdefault.jpg"
+                            alt="">
+                        <h2>Night Changes(FOUR DELUX)</h2>
+                        <p>One Direction</p>
+                    </div>
+                    <div class="card" data-song="Metamorphosis">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://ih1.redbubble.net/image.4586431321.3694/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+                            alt="">
+                        <h2>Metamorphosis</h2>
+                        <p>Interworld</p>
+                    </div>
+                    <div class="card" data-song="me_and_devil">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJeRArhQk0LBMGySFVpdfEYrr1ezY7BpmfCeIAFlv9kg&s=10"
+                            alt="">
+                        <h2>Me and Devil</h2>
+                        <p>Soap&Skin</p>
+                    </div>
+                    <div class="card" data-song="khaab">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://c.saavncdn.com/594/Khaab-Punjabi-2016-500x500.jpg" alt="">
+                        <h2>Khaab</h2>
+                        <p>Akhil</p>
+                    </div>
+                    <div class="card" data-song="gansta">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Q0pQQiK0wIYdo_3O1PlbbWqZg9DRB2gnMOP5__sYMpzj029wQBUHst1c&s=10"
+                            alt="">
+                        <h2>Gangster Paradise</h2>
+                        <p>Coolio</p>
+                    </div>
+                    <div class="card" data-song="uv_gang">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://cdn-images.dzcdn.net/images/cover/f44fd286d195ac65022353a959bf92a8/0x1900-000000-80-0-0.jpg"
+                            alt="">
+                        <h2>Uneverage Gang</h2>
+                        <p>Underworld</p>
+                    </div>
+                    <div class="card" data-song="clandistina">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFzFoDSYI43DXOBOCWJQmtHwWCA-aCK_gLMDmLIKV9NA&s=10"
+                            alt="">
+                        <h2>Clandistina</h2>
+                        <p>Emma-Peters Salar</p>
+                    </div>
+                    <div class="card" data-song="beggin">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoAxmLJhON4DvQvu6to1C24nfSWLKGbHfuPzGvhu9reCbA_AG70v_nE3Il&s=10"
+                            alt="">
+                        <h2>Beggin</h2>
+                        <p>Maneskin</p>
+                    </div>
+                    <div class="card" data-song="way_down_we_go">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://cdn-images.dzcdn.net/images/cover/7c51d0690dbed8f61cb218b03059f2a9/1900x1900-000000-80-0-0.jpg"
+                            alt="">
+                        <h2>Way Down We Go</h2>
+                        <p>Kaleo</p>
+                    </div>
+                    <div class="card" data-song="soniye">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAiZRGFoLk77ppohBLM4DNiLNAezO9Hvyl0gyj4Jt1zyjNq3FGzwAS2KiJ&s=10"
+                            alt="">
+                        <h2>Soniye</h2>
+                        <p>Shubh</p>
+                    </div>
+                    <div class="card" data-song="together">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://c.saavncdn.com/789/Together-Punjabi-2025-20250716110256-500x500.jpg" alt="">
+                        <h2>Together</h2>
+                        <p>Shubh</p>
+                    </div>
+                    <div class="card" data-song="winning">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://i.scdn.co/image/ab67616d0000b27358b46d6f1500ead2bbbf9915" alt="">
+                        <h2>Winning speech</h2>
+                        <p>Karan Aujla</p>
+                    </div>
+                    <div class="card" data-song="onTop">
+                        <div class="play-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="12" fill="#1fdf64" />
+                                <polygon points="9,6 18,12 9,18" fill="black" transform="translate(1.5, 0)" />
+                            </svg>
+                        </div>
+                        <img width="200px" height="200px"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYcRWAFb3J8vjNC2mP5IEELvPF7sA4MN-DDJvZgvPZ2Q&s"
+                            alt="">
+                        <h2>On Top</h2>
+                        <p>Karan Aujla</p>
+                    </div>
+                    <!-- ending of cards -->
+                    <div class="playbar">
+                        <div class="seek">
+                            <div class="circle">
+                                <i class="fa-solid fa-circle"></i>
+                            </div>
+                        </div>
+                        <div class="songInfo"> </div>
+                        <div>
+                            <button class="pre-btn">
+                                <i class="fa-solid fa-backward-step"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="play1-btn">
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                        <button class='forward-btn'>
+                            <i class="fa-solid fa-forward-step"></i>
+                        </button>
+                    </div>
+                    <div class="songTimer"> </div>
+                    <div class="volume">
+                        <div class="low">
+                            <i class="fa-solid fa-volume-low"></i>
+                        </div>
+                        <div class="v-seek">
+                            <div class="v-circle">
+
+                            </div>
+                        </div>
+                        <div class="high">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>       function titleART(card) {
+            let title = card.querySelector('h2').textContent;
+            let artist = card.querySelector('p').textContent;
+
+            let info = document.querySelector('.songInfo');
+            info.innerHTML = `
+        <div class="song-title">${title}</div>
+        <div class="song-artist">${artist}</div>
+    `;
+        }
+        function formatTime(seconds) {
+            if (isNaN(seconds) || seconds < 0) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+        let current_audio = null;
+        let currentCard = null;
+        const icon1 = document.querySelector('.play1-btn');
+        const icon = icon1.querySelector('i');
+        document.title = "Spotify - Web Player: Music for everyone"
+        function play() {
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('click', function () {
+                    currentCard = this;
+                    titleART(this);
+                    icon.className = 'fa-solid fa-pause';
+                    let songFile = this.dataset.song;
+                    let audioPath = `SpotifySongs/${songFile}.mp3`;
+                    if (current_audio) {
+                        current_audio.pause();
+                        current_audio = null;
+                    }
+                    let audio = new Audio(audioPath);
+                    current_audio = audio;
+                    current_audio.addEventListener('timeupdate', () => {
+                        console.log(current_audio.currentTime, current_audio.duration);
+                        document.querySelector('.songTimer').innerHTML = `${formatTime(current_audio.currentTime)}/${formatTime(current_audio.duration)}`;
+                        document.querySelector('.circle').style.left = (current_audio.currentTime / current_audio.duration) * 100 + '%'
+                    });
+                    console.log("Full path:", audioPath);
+                    audio.play();
+                    console.log('playing' + songFile)
+                    audio.addEventListener('ended', () => {
+                        current_audio = null;
+                    })
+                })
+            })
+        }
+        async function main() {
+            let a = await fetch('songs.json');
+            let response = await a.json();
+            console.log(response);
+            play();
+        }
+        main();
+        document.querySelector('.search-input').addEventListener('input', function (event) {
+            let input = event.target.value.toLowerCase().trim();
+            document.querySelectorAll('.card').forEach(card => {
+                let title = card.querySelector('h2').textContent.toLowerCase();
+                let artist = card.querySelector('p').textContent.toLowerCase();
+                if (input === '') {
+                    card.style.display = 'block';
+                }
+                else if (title.includes(input) || artist.includes(input)) {
+                    card.style.display = 'block';
+                }
+                else {
+                    card.style.display = 'none'
+                }
+
+            })
+
+        })
+        document.querySelector('.play1-btn').addEventListener('click', function () {
+            if (!current_audio) {
+                alert('select a song please');
+                return
+            }
+            if (current_audio) {
+                icon.className = 'fa-solid fa-play'
+            }
+            console.log('hi')
+
+            if (current_audio.paused) {
+                current_audio.play();
+                icon.className = 'fa-solid fa-pause';
+                return;
+            } else {
+                current_audio.pause();
+                icon.className = 'fa-solid fa-play';
+                return;
+            }
+        })
+        document.querySelector('.seek').addEventListener('click', function (e) {
+            if (!current_audio) return;
+
+            const rect = this.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const percent = clickX / rect.width;
+
+            current_audio.currentTime = percent * current_audio.duration;
+        });
+        document.querySelector('.forward-btn').addEventListener('click', function () {
+            const cards = document.querySelectorAll('.card');
+            if (!currentCard) {
+                if (cards.length > 0) cards[0].click();
+                alert('select a song track first');
+                return;
+            }
+            let currentIndex = Array.from(cards).indexOf(currentCard);
+            let nextIndex = (currentIndex + 1) % cards.length;
+            cards[nextIndex].click();
+        });
+        document.querySelector('.pre-btn').addEventListener('click', function () {
+            const cards = document.querySelectorAll('.card');
+            if (!currentCard) {
+                if (cards.length > 0) cards[0].click();
+                return;
+            }
+            let currentIndex = Array.from(cards).indexOf(currentCard);
+            let prevIndex = (currentIndex - 1 + cards.length) % cards.length;
+            cards[prevIndex].click();
+        });
+        const volumeSeek = document.querySelector('.v-seek');
+        const volumeCircle = document.querySelector('.v-circle');
+        const volumeIcon = document.querySelector('.low i');
+
+        volumeSeek.addEventListener('click', function (e) {
+            if (!current_audio) return;
+
+            const rect = this.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            let percent = clickX / rect.width;
+
+
+            if (percent < 0) percent = 0;
+            if (percent > 1) percent = 1;
+
+
+            current_audio.volume = percent;
+
+
+            volumeCircle.style.left = (percent * 100) + '%';
+
+
+            updateVolumeIcon(percent);
+        });
+
+
+        volumeIcon.addEventListener('click', function () {
+            if (!current_audio) return;
+
+            if (current_audio.muted) {
+                current_audio.muted = false;
+                let currentPercent = parseFloat(volumeCircle.style.left) || 100;
+                volumeCircle.style.left = currentPercent + '%';
+                updateVolumeIcon(currentPercent / 100);
+            } else {
+                current_audio.muted = true;
+                volumeCircle.style.left = '0%';
+                volumeIcon.className = 'fa-solid fa-volume-xmark';
+            }
+        });
+
+        function updateVolumeIcon(percent) {
+            if (percent === 0) {
+                volumeIcon.className = 'fa-solid fa-volume-off';
+            } else if (percent < 0.5) {
+                volumeIcon.className = 'fa-solid fa-volume-low';
+            } else {
+                volumeIcon.className = 'fa-solid fa-volume-high';
+            }
+        }
+        if (volumeCircle) {
+            volumeCircle.style.left = '100%';
+        }
+    </script>
+</body>
+
+</html>
